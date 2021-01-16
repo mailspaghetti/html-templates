@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>h1{ color: red }</style>
+  </head>
+  <body>
+    <h1>$title$</h1>
+    <div>
+        <span>Thank You $data.customer.name$ for your order find the summary below</span>
+    </div>
+    <div>
+        
+       <table>
+          <tr>
+            <td>#</td>
+            <td>Description</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Total</td>
+          </tr>
+        $data.orders : {
+         <tr>
+            <td>$it.id$</td>
+            <td>$it.description$</td>
+            <td>$it.qty$</td>
+            <td>$it.price$</td>
+            <td>$it.total$</td>
+         </tr>
+        }$
+      </table>
+    </div>
+    
+    <div>
+      <h2>Payment was done by credit card visa ...</h2>
+    </div>
+  </body>
+</html>
